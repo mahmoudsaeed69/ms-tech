@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Tech</title>
+<link rel="icon" href="images/logos.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo">MS<span>Tech</span></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+    <i class="fas fa-times"></i>
+  </button>
+  <ul>
+    <li><a href="#home" class="mobile-link">Home</a></li>
+    <li><a href="#services" class="mobile-link">Services</a></li>
+    <li><a href="#about" class="mobile-link">About</a></li>
+    <li><a href="#work" class="mobile-link">Work</a></li>
+    <li><a href="#pricing" class="mobile-link">Pricing</a></li>
+    <li><a href="#contact" class="mobile-link">Contact</a></li>
+  </ul>
+</div>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="hero-grid"></div>
+    <canvas id="particles"></canvas>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Now Available — Version 3.0 Release
+    </div>
+    <h1>Build the Future<br>with <span class="highlight">MSTech</span></h1>
+    <p>We craft cutting-edge digital solutions that transform businesses, empower teams, and deliver extraordinary results. Your vision, our expertise.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">
+        Start Your Project <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#work" class="btn btn-secondary">
+        <i class="fas fa-play"></i> View Our Work
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-number"><span class="counter" data-target="500">0</span>+</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number"><span class="counter" data-target="150">0</span>+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number"><span class="counter" data-target="50">0</span>+</div>
+        <div class="stat-label">Team Members</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number"><span class="counter" data-target="99">0</span>%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">What We Do</span>
+      <h2 class="section-title">Services That Drive Results</h2>
+      <p class="section-desc">We deliver comprehensive digital solutions tailored to your unique needs, from concept to launch and beyond.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h3>Web Development</h3>
+        <p>Custom websites and web applications built with modern technologies for optimal performance and scalability.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Apps</h3>
+        <p>An exceptional user experience (UX) with ultra-fast software performance for iOS and Android systems.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-brain"></i></div>
+        <h3>AI & Machine Learning</h3>
+        <p>Intelligent solutions powered by cutting-edge AI to automate processes and unlock data-driven insights.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-palette"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Beautiful, intuitive interfaces designed with user-centric principles to maximize engagement and conversions.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-cloud"></i></div>
+        <h3>Cloud Solutions</h3>
+        <p>Scalable cloud infrastructure and migration services to ensure reliability, security, and cost efficiency.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Cybersecurity</h3>
+        <p>Comprehensive security audits and implementations to protect your digital assets from evolving threats.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <div class="section-container">
+    <div class="about-grid">
+      <div class="about-image reveal">
+        <div class="about-img-container">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=450&fit=crop" alt="Team collaboration" class="about-illustration" onerror="this.style.display='none'">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg, rgba(108,99,255,0.3), rgba(255,101,132,0.3));display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-rocket" style="font-size:5rem;opacity:0.3;"></i>
+          </div>
+        </div>
+        <div class="about-float-card float-card-1">
+          <div class="float-card-number">3+</div>
+          <div class="float-card-label">Years Experience</div>
+        </div>
+        <div class="about-float-card float-card-2">
+          <div class="float-card-number">98%</div>
+          <div class="float-card-label">On-Time Delivery</div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">We Transform Ideas Into Digital Excellence</h2>
+        <p class="about-text">
+          Founded in 2024, MSTech has been at the forefront of digital inMStion, helping businesses of all sizes navigate the ever-evolving tech landscape. Our team of passionate experts combines creativity with technical prowess to deliver solutions that make a real impact.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+            <span>Agile methodology for faster delivery</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+            <span>Dedicated project managers for each client</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+            <span>24/7 support and maintenance</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+            <span>Transparent pricing with no hidden costs</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary">Work With Us <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Work Section -->
+<section class="work" id="work">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">Our Latest Projects</h2>
+      <p class="section-desc">Explore some of our recent work that showcases our expertise and commitment to excellence.</p>
+    </div>
+    <div class="work-grid">
+
+      <div class="work-card reveal">
+        <div class="work-img-wrapper">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg, #667eea, #764ba2);display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-shopping-bag" style="font-size:3rem;color:rgba(255,255,255,0.3);"></i>
+          </div>
+        </div>
+ <a 
+  href="https://mahmoudsaeed69.github.io/Fashion/about.html" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="work-link"
+>
+        <div class="work-overlay">
+          <span class="work-category">E-Commerce</span>
+          <h3 class="work-title">Little Fashion Platform</h3>
+          <p class="work-desc">E-commerce with AI support and a smooth payment process.</p>
+        </div>
+ </a>
+      </div>
+
+<div class="work-card reveal">
+        <div class="work-img-wrapper">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg, #43e97b, #38f9d7);display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-female" style="font-size:3rem;color:rgba(255,255,255,0.3);"></i>
+          </div>
+        </div>
+        <a 
+  href="https://jenan-brand.netlify.app/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="work-link"
+>
+        <div class="work-overlay">
+          <span class="work-category">jenan-brand</span>
+          <h3 class="work-title">Trendy fashion platform</h3>
+          <p class="work-desc">Turning the concept of shopping into a visual journey designed to enhance brand identity.</p>
+        </div>
+        </a>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-img-wrapper">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg, #f093fb, #f5576c);display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-heartbeat" style="font-size:3rem;color:rgba(255,255,255,0.3);"></i>
+          </div>
+        </div>
+        <a 
+  href="https://mahmoudsaeed69.github.io/mediplus-lite/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="work-link"
+>
+  <div class="work-overlay">
+    <span class="work-category">Healthcare</span>
+
+    <h3 class="work-title">Mediplus</h3>
+
+    <p class="work-desc">
+      Telemedicine platform connecting patients with healthcare providers worldwide.
+    </p>
+  </div>
+</a>
+      </div>
+
+ <div class="work-card reveal">
+        <div class="work-img-wrapper">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg, #fa709a, #fee140);display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-seedling" style="font-size:3rem;color:rgba(255,255,255,0.3);"></i>
+          </div>
+        </div>
+           <a 
+  href="https://grocery-store-flame.vercel.app/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="work-link"
+>
+        <div class="work-overlay">
+          <span class="work-category">Food & Beverage</span>
+          <h3 class="work-title">FreshBite Delivery</h3>
+          <p class="work-desc">Farm-to-table delivery app with real-time tracking and subscription meals.</p>
+        </div>
+           </a>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-img-wrapper">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg, #4facfe, #00f2fe);display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-hand-rock" style="font-size:3rem;color:rgba(255,255,255,0.3);"></i>
+          </div>
+        </div>
+        <a 
+  href="https://mahmoudsaeed69.github.io/Boxing/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="work-link"
+>
+        <div class="work-overlay">
+          <span class="work-category">fitness</span>
+          <h3 class="work-title">Boxing and Fitness Platform</h3>
+          <p class="work-desc">For boxing clubs and gyms, it motivates trainees and displays training courses</p>
+        </div>
+        </a>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-img-wrapper">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg, #a18cd1, #fbc2eb);display:flex;align-items:center;justify-content:center;">
+            <i class="fa-solid fa-mug-saucer" style="font-size:3rem;color:rgba(255,255,255,0.3);"></i>
+          </div>
+        </div>
+        <a 
+  href="https://github.com/mahmoudsaeed69/antique_cafe" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="work-link"
+>
+        <div class="work-overlay">
+          <span class="work-category">antique_cafe</span>
+          <h3 class="work-title">The professional café</h3>
+          <p class="work-desc">A design for cafes with a smooth UI and a distinctive browsing experience.</p>
+        </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">Testimonials</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-desc">Don't just take our word for it — hear from the businesses we've helped transform.</p>
+    </div>
+    <div class="testimonials-slider reveal">
+      <div class="testimonials-track" id="testimonialsTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-inner">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">MSTech completely transformed our digital presence. Their team delivered beyond our expectations, and the results speak for themselves — a 300% increase in online conversions within the first quarter.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <div style="width:100%;height:100%;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;">SM</div>
+              </div>
+              <div class="testimonial-info">
+                <h4>Sarah Mitchell</h4>
+                <span>CEO, TechVentures Inc.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-inner">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Working with MSTech was a game-changer for our startup. They understood our vision from day one and built a product that perfectly aligned with our goals. Highly recommended for any ambitious project.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <div style="width:100%;height:100%;background:linear-gradient(135deg,#f093fb,#f5576c);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;">JC</div>
+              </div>
+              <div class="testimonial-info">
+                <h4>James Chen</h4>
+                <span>Founder, CloudSync</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-inner">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">The level of professionalism and technical expertise at MSTech is unmatched. They not only delivered our project on time but also provided invaluable insights that improved our overall strategy.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <div style="width:100%;height:100%;background:linear-gradient(135deg,#4facfe,#00f2fe);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;">ER</div>
+              </div>
+              <div class="testimonial-info">
+                <h4>Emily Rodriguez</h4>
+                <span>CTO, DataFlow Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevSlide" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn" id="nextSlide" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="slider-dots" id="sliderDots">
+        <div class="slider-dot active" data-index="0"></div>
+        <div class="slider-dot" data-index="1"></div>
+        <div class="slider-dot" data-index="2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing" id="pricing">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">Pricing</span>
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-desc">Choose the plan that fits your needs. No hidden fees, no surprises.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card reveal">
+        <div class="pricing-name">Starter</div>
+        <div class="pricing-price">$200 <span>/project</span></div>
+        <div class="pricing-desc">Perfect for small businesses and startups getting started.</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check-circle"></i> Up to 5 pages</li>
+          <li><i class="fas fa-check-circle"></i> Responsive design</li>
+          <li><i class="fas fa-check-circle"></i> Basic SEO optimization</li>
+          <li><i class="fas fa-check-circle"></i> 30-day support</li>
+          <li><i class="fas fa-check-circle"></i> 2 rounds of revisions</li>
+        </ul>
+        <button class="pricing-btn pricing-btn-outline" onclick="location.href='#contact'">Get Started</button>
+      </div>
+      <div class="pricing-card featured reveal">
+        <div class="pricing-name">Professional</div>
+        <div class="pricing-price">$500 <span>/project</span></div>
+        <div class="pricing-desc">Ideal for growing businesses that need advanced features.</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check-circle"></i> Up to 15 pages</li>
+          <li><i class="fas fa-check-circle"></i> Custom animations</li>
+          <li><i class="fas fa-check-circle"></i> Advanced SEO & analytics</li>
+          <li><i class="fas fa-check-circle"></i> 90-day priority support</li>
+          <li><i class="fas fa-check-circle"></i> CMS integration</li>
+          <li><i class="fas fa-check-circle"></i> Unlimited revisions</li>
+        </ul>
+        <button class="pricing-btn pricing-btn-primary" onclick="location.href='#contact'">Get Started</button>
+      </div>
+      <div class="pricing-card reveal">
+        <div class="pricing-name">Enterprise</div>
+        <div class="pricing-price">Custom</div>
+        <div class="pricing-desc">Tailored solutions for large organizations with complex needs.</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check-circle"></i> Unlimited pages</li>
+          <li><i class="fas fa-check-circle"></i> Full-stack development</li>
+          <li><i class="fas fa-check-circle"></i> AI & ML integration</li>
+          <li><i class="fas fa-check-circle"></i> Dedicated team</li>
+          <li><i class="fas fa-check-circle"></i> 24/7 premium support</li>
+          <li><i class="fas fa-check-circle"></i> SLA guarantee</li>
+        </ul>
+        <button class="pricing-btn pricing-btn-outline" onclick="location.href='#contact'">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="section-container">
+    <div class="cta-box reveal">
+      <h2>Ready to Build Something Amazing?</h2>
+      <p>Let's discuss your project and explore how MSTech can help you achieve your digital goals.</p>
+      <a href="#contact" class="btn btn-white">
+        Let's Talk <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">Contact</span>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-desc">Have a project in mind? We'd love to hear from you. Send us a message and we'll respond within 24 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Let's Start a Conversation</h3>
+        <p>Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-item-text">
+              <span>Address</span>
+              <strong> Alexandria, Egypt</strong>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-item-text">
+              <span>Email</span>
+              <strong>mahmoudsaeedd6124@gmail.com</strong>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-item-text">
+              <span>Phone</span>
+              <strong>+20 100-955-7074</strong>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+            <div class="contact-item-text">
+              <span>Working Hours</span>
+              <strong>Mon - Fri: 9AM - 6PM PST</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Doe" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" placeholder="+20 10xxxxxxxx" required>
+</div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service">
+              <option value="">Select a service</option>
+              <option value="web">Web Development</option>
+              <option value="ai">AI & Machine Learning</option>
+              <option value="design">UI/UX Design</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-check-circle"></i>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">MS<span>Tech</span></div>
+      <p>Transforming ideas into digital reality. We build inMStive solutions that help businesses grow and succeed in the digital age.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/houda.salman.79?mibextid=JRoKGi" aria-label="Twitter" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/mahmoud-saeed-11145a317/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BweAVQAGDRHSdSqDdmp%2Fofg%3D%3D" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/mahmoudsaeed69" aria-label="GitHub" target="_blank"><i class="fab fa-github" ></i></a>
+        <a href="https://www.instagram.com/mahmoudsaeed_6142/profilecard/?igsh=MXVsMnYxcnBmc29xMQ==" aria-label="Dribbble" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Portfolio</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Mobile Apps</a></li>
+        <li><a href="#">AI Solutions</a></li>
+        <li><a href="#">UI/UX Design</a></li>
+        <li><a href="#">Cloud Services</a></li>
+        <li><a href="#">Cybersecurity</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">API Reference</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 MSTech. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+<!-- script with js -->
+<script src="index.js"></script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const data = {
+    firstName: document.getElementById("firstName").value,
+    lastName: document.getElementById("lastName").value,
+    email: document.getElementById("email").value,
+    userPhone: document.getElementById("phone").value,
+    service: document.getElementById("service").value,
+    message: document.getElementById("message").value
+  };
+
+  try {
+    const res = await fetch("http://localhost:5000/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+      document.getElementById("formSuccess").style.display = "block";
+      document.getElementById("contactForm").reset();
+    } else {
+     alert(result.error || "فشل الإرسال");
+    console.log(result);
+    }
+
+  } catch (error) {
+    alert("في مشكلة في السيرفر");
+  }
+});
+</script>
+</body>
+</html>
+
