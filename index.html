@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.bunny.net">
 <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
@@ -612,7 +612,7 @@
   </div>
 </footer>
 <!-- script with js -->
-<script src="index.js"></script>
+<script src="js/index.js"></script>
 <script>
 document.getElementById("contactForm").addEventListener("submit", async function(e) {
   e.preventDefault();
@@ -627,7 +627,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
   };
 
   try {
-    const res = await fetch("https://ms-tech-production.up.railway.app/", {
+    const res = await fetch("https://ms-tech-production.up.railway.app/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
