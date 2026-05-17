@@ -1,5 +1,5 @@
 git add .
-git commit -m "وصف التعديل"
+git commit -m ""
 git push
 
 📌 خلي الكومنت واضح:
