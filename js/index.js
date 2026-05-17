@@ -229,4 +229,54 @@
     document.querySelector('.orb-3').style.transform = `translate(${x * 10}px, ${y * 10}px)`;
   });
 
+// translate 
+let currentLang = "en";
+let translations = {};
 
+// تحميل ملف اللغة
+async function loadLanguage(lang) {
+  const res = await fetch(`lang/${lang}.json`);
+  translations = await res.json();
+
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
+
+  applyTranslations();
+  setDirection(lang);
+}
+
+// تطبيق الترجمة على النصوص
+function applyTranslations() {
+  // نصوص عادية
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[key]) {
+      el.textContent = translations[key];
+    }
+  });
+
+  // Placeholder
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (translations[key]) {
+      el.placeholder = translations[key];
+    }
+  });
+}
+
+// اتجاه الصفحة
+function setDirection(lang) {
+  document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
+}
+
+// تغيير اللغة من الناف
+document.getElementById("langSwitcher").addEventListener("change", (e) => {
+  loadLanguage(e.target.value);
+});
+
+// تحميل اللغة المحفوظة
+window.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "en";
+  document.getElementById("langSwitcher").value = savedLang;
+  loadLanguage(savedLang);
+});

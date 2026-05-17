@@ -1118,3 +1118,20 @@
     z-index: 0;
     pointer-events: none;
   }
+
+  .nav-actions {
+  display: flex;
+  align-items: center;
+}
+/* translate */
+#langSwitcher {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+body[dir="rtl"] {
+  font-family: 'Cairo', sans-serif;
+}
