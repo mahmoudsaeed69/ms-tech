@@ -86,11 +86,14 @@
 
   function goToSlide(index) {
     currentSlide = index;
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentSlide);
-    });
-  }
+    const isRTL = document.documentElement.dir === 'rtl';
+  const directionMultiplier = isRTL ? 1 : -1;
+  track.style.transform = `translateX(${directionMultiplier * currentSlide * 100}%)`;
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentSlide);
+  });
+}
 
   prevBtn.addEventListener('click', () => {
     goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
@@ -269,9 +272,13 @@ function updateContent() {
     document.body.classList.remove('rtl-layout');
   }
 
-  // تحديث شكل الزر النشط
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
   document.getElementById(currentLang === 'ar' ? 'btn-ar' : 'btn-en').classList.add('active');
+
+  // الكود الجديد: تحديث السلايدر ليتأقلم مع الاتجاه الجديد فوراً
+  if (typeof goToSlide === 'function') {
+    goToSlide(currentSlide);
+  }
 }
 
 // دالة لتغيير اللغة عند الضغط على أزرار تبديل اللغة
