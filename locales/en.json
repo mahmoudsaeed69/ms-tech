@@ -1,0 +1,36 @@
+{
+  "translation": {
+    "nav": {
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hello, I am",
+      "role": "Web Designer & Developer",
+      "description": "Crafting premium, dynamic, and responsive web experiences with over 3 years of expertise.",
+      "cta": "View My Work"
+    },
+    "about": {
+      "title": "About Me",
+      "content": "I am a passionate Web Designer and Developer with over 3 years of experience in creating modern, user-centric web applications. My focus is on writing clean, scalable code and designing interfaces that provide a premium user experience."
+    },
+    "experience": {
+      "title": "Where I've Worked"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "viewProject": "View Project"
+    },
+    "contact": {
+      "title": "Let's Work Together",
+      "subtitle": "Ready to design a service or website for your business?",
+      "whatsapp": "Contact via WhatsApp",
+      "email": "Send an Email"
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    }
+  }
+}

@@ -1134,4 +1134,53 @@
 }
 body[dir="rtl"] {
   font-family: 'Cairo', sans-serif;
+  text-align: right;
+};
+.rtl-layout .nav-links li {
+  margin-left: 0;
+  margin-right: 20px;
+}
+/* ==========================================
+   Language Switcher Styles
+   ========================================== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 4px;
+  margin: 0 15px;
+  backdrop-filter: blur(5px);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 6px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.lang-btn:hover {
+  color: #ffffff;
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, #6c63ff, #ff6584);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin: 15px auto;
+    justify-content: center;
+    width: fit-content;
+  }
 }

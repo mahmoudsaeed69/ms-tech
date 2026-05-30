@@ -229,54 +229,55 @@
     document.querySelector('.orb-3').style.transform = `translate(${x * 10}px, ${y * 10}px)`;
   });
 
-// translate 
-let currentLang = "en";
-let translations = {};
+// ==========================================
+// Translation Logic (i18next)
+// ==========================================
 
-// تحميل ملف اللغة
-async function loadLanguage(lang) {
-  const res = await fetch(`lang/${lang}.json`);
-  translations = await res.json();
+// جلب اللغة المحفوظة في المتصفح أو استخدام الإنجليزية كافتراضي
+const savedLang = localStorage.getItem("lang") || "en";
 
-  currentLang = lang;
-  localStorage.setItem("lang", lang);
-
-  applyTranslations();
-  setDirection(lang);
-}
-
-// تطبيق الترجمة على النصوص
-function applyTranslations() {
-  // نصوص عادية
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[key]) {
-      el.textContent = translations[key];
-    }
-  });
-
-  // Placeholder
-  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-    const key = el.getAttribute("data-i18n-placeholder");
-    if (translations[key]) {
-      el.placeholder = translations[key];
-    }
-  });
-}
-
-// اتجاه الصفحة
-function setDirection(lang) {
-  document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
-}
-
-// تغيير اللغة من الناف
-document.getElementById("langSwitcher").addEventListener("change", (e) => {
-  loadLanguage(e.target.value);
+// تهيئة مكتبة i18next
+// (ملاحظة: translationResources يتم قراءتها تلقائياً من ملف translations.js الذي يجب استدعاؤه في HTML قبل هذا الملف)
+i18next.init({
+  lng: savedLang, // استخدام اللغة المحفوظة
+  fallbackLng: 'en',
+  resources: translationResources 
+}).then(function() {
+  updateContent();
 });
 
-// تحميل اللغة المحفوظة
-window.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("lang") || "en";
-  document.getElementById("langSwitcher").value = savedLang;
-  loadLanguage(savedLang);
-});
+// دالة تحديث محتوى الصفحة وتغيير الاتجاه (RTL/LTR)
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(function(element) {
+    const key = element.getAttribute('data-i18n');
+    element.innerHTML = i18next.t(key);
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function(element) {
+    const key = element.getAttribute('data-i18n-placeholder');
+    element.placeholder = i18next.t(key);
+  });
+
+  const currentLang = i18next.language;
+  document.documentElement.lang = currentLang;
+  
+  if (currentLang === 'ar') {
+    document.documentElement.dir = 'rtl';
+    document.body.classList.add('rtl-layout');
+  } else {
+    document.documentElement.dir = 'ltr';
+    document.body.classList.remove('rtl-layout');
+  }
+
+  // تحديث شكل الزر النشط
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  document.getElementById(currentLang === 'ar' ? 'btn-ar' : 'btn-en').classList.add('active');
+}
+
+// دالة لتغيير اللغة عند الضغط على أزرار تبديل اللغة
+window.changeLanguage = function(lng) {
+  i18next.changeLanguage(lng).then(function() {
+    localStorage.setItem("lang", lng); // حفظ اختيار المستخدم في المتصفح
+    updateContent();
+  });
+};
